@@ -3,6 +3,7 @@ import "./sign-in.styles.scss";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 import { signInWithGoogle } from "../../firebase/firebase.utils";
+
 export default function SignIn() {
   const [contact, setContact] = useState({
     email: "",
@@ -36,7 +37,7 @@ export default function SignIn() {
           type="email"
           value={contact.email}
           required
-          label="email"
+          label="Email"
         />
         <FormInput
           handleChange={handleChange}
@@ -44,7 +45,7 @@ export default function SignIn() {
           type="password"
           value={contact.password}
           required
-          label="password"
+          label="Password"
         />
         <div className="buttons">
           <CustomButton type="submit"> Sign in </CustomButton>
